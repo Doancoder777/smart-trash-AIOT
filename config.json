@@ -1,0 +1,58 @@
+{
+  "architectures": [
+    "SiglipForImageClassification"
+  ],
+  "dtype": "float32",
+  "id2label": {
+    "0": "battery",
+    "1": "bio",
+    "2": "cardboard",
+    "3": "glass",
+    "4": "metal",
+    "5": "paper",
+    "6": "plastic",
+    "7": "plastic_bag"
+  },
+  "initializer_factor": 1.0,
+  "label2id": {
+    "battery": "0",
+    "bio": "1",
+    "cardboard": "2",
+    "glass": "3",
+    "metal": "4",
+    "paper": "5",
+    "plastic": "6",
+    "plastic_bag": "7"
+  },
+  "model_type": "siglip",
+  "problem_type": "single_label_classification",
+  "text_config": {
+    "attention_dropout": 0.0,
+    "dtype": "float32",
+    "hidden_act": "gelu_pytorch_tanh",
+    "hidden_size": 768,
+    "intermediate_size": 3072,
+    "layer_norm_eps": 1e-06,
+    "max_position_embeddings": 64,
+    "model_type": "siglip_text_model",
+    "num_attention_heads": 12,
+    "num_hidden_layers": 12,
+    "projection_size": 768,
+    "vocab_size": 32000
+  },
+  "transformers_version": "4.57.3",
+  "vision_config": {
+    "attention_dropout": 0.0,
+    "dtype": "float32",
+    "hidden_act": "gelu_pytorch_tanh",
+    "hidden_size": 768,
+    "image_size": 224,
+    "intermediate_size": 3072,
+    "layer_norm_eps": 1e-06,
+    "model_type": "siglip_vision_model",
+    "num_attention_heads": 12,
+    "num_channels": 3,
+    "num_hidden_layers": 12,
+    "patch_size": 16
+  }
+}
