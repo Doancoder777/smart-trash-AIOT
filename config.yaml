@@ -1,0 +1,47 @@
+# Smart Trash AIOT Configuration
+
+# Camera Settings
+camera:
+  resolution: [640, 480]
+  fps: 30
+  device_id: 0
+
+# Image Classification Settings
+classification:
+  model_path: "models/waste_classifier.h5"
+  confidence_threshold: 0.7
+  categories:
+    - recyclable      # Recyclable waste
+    - organic         # Organic waste
+    - hazardous       # Hazardous waste
+    - general         # General waste
+
+# Voice Recognition Settings
+voice:
+  language: "vi-VN"  # Vietnamese language
+  timeout: 5
+  phrase_time_limit: 3
+  commands:
+    open: ["mở nắp", "mở", "open"]
+    close: ["đóng nắp", "đóng", "close"]
+    classify: ["phân loại", "classify", "nhận diện"]
+    status: ["trạng thái", "status"]
+
+# Motor Control Settings (GPIO pins for Raspberry Pi)
+motor:
+  lid_motor_pin: 17
+  servo_min_angle: 0
+  servo_max_angle: 90
+  open_duration: 3  # seconds to keep lid open
+
+# Sensors
+sensors:
+  ultrasonic_trigger_pin: 23
+  ultrasonic_echo_pin: 24
+  distance_threshold: 30  # cm - auto open when object detected
+
+# System Settings
+system:
+  auto_close_delay: 5  # seconds
+  voice_feedback: true
+  log_file: "logs/smart_trash.log"
